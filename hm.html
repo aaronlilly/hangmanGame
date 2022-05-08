@@ -1,0 +1,161 @@
+<html>
+<head>
+<title>HangMan</title>
+
+<style>
+
+.nonInit1{
+display:none
+}
+
+.p2{
+display:none
+}
+</style>
+
+  <title>Time</title>
+<script src="./assets/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="./assets/bootstrap.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<script>
+let wordsAmount = 0;
+
+
+   $(document).ready(function() {
+       $('#starter').click(function() {
+
+       $('#playOps').css({'display':'none'});
+        $('#vsPlayerInit').removeClass("nonInit1");
+      });
+  });
+
+
+   $(document).ready(function() {
+       $('#toModl').click(function() {
+	$('#modalOutput').html("");
+	$('#exampleModalLabel').html("");
+	$('#exampleModalLabel').append("Enter your " +myWordLen.value + " words bellow.<br>");
+	wordsAmount =+ myWordLen.value;
+	for (let i = 0; i < myWordLen.value; i++) {
+
+	
+	var j= i+1;
+
+	$('#modalOutput').append('<input type="text" id="' + i + '"placeholder="word '+ j +'"'  +'style="width:75px;margin-right:3px;margin-top:3px"> ');
+      	
+	}
+       
+      });
+  });
+
+  function hideaMenu() {
+
+	for (let i = 0; i < wordsAmount; i++) {
+
+	
+
+	$('#wordOutput').append('<div id="o' +i +'"' +"></div>");
+
+	//$('#o1').append('<span style="font-size:36px">[</span>');
+
+	
+	
+	}
+
+var wordy = $('#' + 0 ).val();
+	console.log(wordy);
+	console.log(wordy.length)
+
+	for (var x = 0; x < wordy.length; x++) {
+	
+	$('#o'+0).append('<span style="font-size:36px;"id="box'+ x +'">');
+
+	$('#box' +x ).append(x+1)
+	} 
+
+	//for (var x = 0; x < wordy.length; x++) {
+	
+	//$('#o1').append('<span style="font-size:36px;"id="box'+ x +'">');
+
+	//$('#box' +x ).append(x+1)
+	//} 
+	
+	//$('#o1').append('<span style="font-size:36px">]</span>')	
+
+	$('#hangManPic').removeClass("p2");
+	$('#wordOutput').removeClass("p2");
+
+     
+     
+  };
+
+
+</script>
+ 
+</head>
+<div id="myBody" style="margin: 10px 50px;">
+<div id="playOps">
+  <p>Play Options:</p>
+  <input type="radio" id="vsPlayer" value="vsPlayer" checked>
+  <label for="vsPlayer">Versus Human Player</label><br>
+  <button type="button" id="starter" class="btn btn-primary">Start</button>
+</div>
+
+<div id="vsPlayerInit" class="nonInit1">
+First Player Chooses Words, Second Player Guesses. <br><br>
+<h4>Player1:</h4><br>
+How Many Words?
+  <input type="text" id="myWordLen" value="3" style='width:50px'>
+<br><br>
+  <button type="button" id="toModl"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info">Start Word Entry</button>
+</div>
+
+
+<div id="hangManPic" class="p2">
+
+picture here
+</div>
+
+<div id="wordOutput" class="p2"> </div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <span class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-circle-xmark"></i></span>
+      </div>
+      <div class="modal-body">
+	<div id="modalOutput">
+
+	</div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close and go back</button>
+        <button type="button" data-bs-dismiss="modal" class="btn btn-primary"  onclick="hideaMenu()">Save changes and Hide This Menu</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+</html>
+
+
+  
+  
+
+
+
+
+
+
+
