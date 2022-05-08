@@ -64,17 +64,22 @@ let wordsAmount = 0;
 	
 	}
 
-var wordy = $('#' + 0 ).val();
-	console.log(wordy);
-	console.log(wordy.length)
 
+	// console.log(wordy);
+	// console.log(wordy.length)
+
+  for (let i = 0; i < wordsAmount; i++) {
+    var wordy = $('#' + i ).val();
 	for (var x = 0; x < wordy.length; x++) {
-	
-	$('#o'+0).append('<span style="font-size:36px;"id="box'+ x +'">');
+   
 
-	$('#box' +x ).append(x+1)
+    $('#o'+i).append('<span style="font-size:36px;">' + x +'');
+      
+	// $('#o'+1).append('<span style="font-size:36px;"id="box'+ x +'">');
+
+	// $('#box' +x ).append(x+1)
 	} 
-
+  }
 	//for (var x = 0; x < wordy.length; x++) {
 	
 	//$('#o1').append('<span style="font-size:36px;"id="box'+ x +'">');
