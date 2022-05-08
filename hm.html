@@ -3,6 +3,11 @@
 <title>HangMan</title>
 
 <style>
+.floaty{
+  float:left;
+  margin-right: 3%;
+}
+
 
 .nonInit1{
 display:none
@@ -56,7 +61,7 @@ let wordsAmount = 0;
 
 	
 
-	$('#wordOutput').append('<div id="o' +i +'"' +"></div>");
+	$('#wordOutput').append('<div id="o' +i +'"' +" class='floaty'></div>");
 
 	//$('#o1').append('<span style="font-size:36px">[</span>');
 
@@ -73,7 +78,7 @@ let wordsAmount = 0;
 	for (var x = 0; x < wordy.length; x++) {
    
 
-    $('#o'+i).append('<span style="font-size:36px;">' + x +'');
+    $('#o'+i).append('<span style="font-size:40px;">' + "-" +'');
       
 	// $('#o'+1).append('<span style="font-size:36px;"id="box'+ x +'">');
 
