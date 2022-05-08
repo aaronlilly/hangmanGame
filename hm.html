@@ -57,48 +57,21 @@ let wordsAmount = 0;
 
   function hideaMenu() {
 
-	for (let i = 0; i < wordsAmount; i++) {
+	  for (let i = 0; i < wordsAmount; i++) {
+    $('#wordOutput').append('<div id="o' +i +'"' +" class='floaty'></div>");
+	  }
 
-	
-
-	$('#wordOutput').append('<div id="o' +i +'"' +" class='floaty'></div>");
-
-	//$('#o1').append('<span style="font-size:36px">[</span>');
-
-	
-	
-	}
-
-
-	// console.log(wordy);
-	// console.log(wordy.length)
-
-  for (let i = 0; i < wordsAmount; i++) {
-    var wordy = $('#' + i ).val();
-	for (var x = 0; x < wordy.length; x++) {
-   
-
-    $('#o'+i).append('<span style="font-size:40px;">' + "-" +'');
-      
-	// $('#o'+1).append('<span style="font-size:36px;"id="box'+ x +'">');
-
-	// $('#box' +x ).append(x+1)
-	} 
-  }
-	//for (var x = 0; x < wordy.length; x++) {
-	
-	//$('#o1').append('<span style="font-size:36px;"id="box'+ x +'">');
-
-	//$('#box' +x ).append(x+1)
-	//} 
-	
-	//$('#o1').append('<span style="font-size:36px">]</span>')	
-
+    for (let i = 0; i < wordsAmount; i++) {
+      var wordy = $('#' + i ).val();
+	      for (var x = 0; x < wordy.length; x++) {
+        $('#o'+i).append('<span style="font-size:40px;">' + "-" +'');
+      } 
+    }
 	$('#hangManPic').removeClass("p2");
 	$('#wordOutput').removeClass("p2");
-
-     
-     
+  $('#vsPlayerInit').addClass("p2");     
+  $('#NumberIsh').html("");
+  $('#NumberIsh').append(wordsAmount);
   };
 
 
@@ -117,19 +90,26 @@ let wordsAmount = 0;
 First Player Chooses Words, Second Player Guesses. <br><br>
 <h4>Player1:</h4><br>
 How Many Words?
-  <input type="text" id="myWordLen" value="3" style='width:50px'>
+  <input type="text" id="myWordLen" placeholder="3" style='width:50px'>
 <br><br>
   <button type="button" id="toModl"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info">Start Word Entry</button>
 </div>
 
 
 <div id="hangManPic" class="p2">
-
+  <div id="Player2Now"><h4>Player2:</h4> Enter A Letter Below <br> <input type="text" id="letterChose" placeholder="A"' style='width:50px'>  </div>
+<br>
 picture here
+
+<br>
+There are <span id="NumberIsh"> </span> word(s).
 </div>
 
-<div id="wordOutput" class="p2"> </div>
 
+
+<div id="wordBox">
+<div id="wordOutput" class="p2"> </div>
+</div>
 
 
 <!-- Modal -->
