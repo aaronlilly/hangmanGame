@@ -1,0 +1,55 @@
+body{
+    background-color: #7ee8fa;
+background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+
+font-family: "Times New Roman", Times, serif;
+
+
+
+}
+#page{
+    margin-left:2%;
+}
+
+img {
+	width: 80px;
+	height:119px;
+    margin-left:1%;
+
+}
+
+#coverCard {width: 80px;
+height:119px;}
+
+  #options{display: none;}
+
+  #options{
+      margin-top:2%;
+      margin-bottom:2%;
+      padding:1%;
+      background:black;
+      width: -moz-fit-content;
+  width: fit-content;
+      border-radius: 5%;
+  }
+
+#scoreContainer{
+    float:right;
+    margin-right:2%;
+}
+
+#pTop{
+    font-family: "Impact",  sans-serif;
+    font-size: 40px;
+}
+
+#pBottom{
+    font-family:  "Impact",  sans-serif;
+    font-size: 40px;
+}
+
+#points{
+    font-family:  "American Typewriter",  serif;
+    font-size: 20px;
+    margin-left:10%;
+}
